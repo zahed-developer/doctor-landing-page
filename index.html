@@ -6,6 +6,7 @@
     <title>SALUS</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="images/fv-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="java.js" />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -29,8 +30,7 @@
   </head>
 
   <body>
-    <header
-      class="hero-bg min-h-screen">
+    <header class="hero-bg min-h-screen">
       <nav class="container flex items-center justify-between py-5">
         <div class="flex justify-between items-center gap-20">
           <img
@@ -64,17 +64,15 @@
             />
           </div>
         </div>
-        <button class="lg:hidden text-white text-3xl">
+        <button id="menu-btn" class="lg:hidden text-white text-3xl">
           <i class="fa-solid fa-bars"></i>
         </button>
       </nav>
 
       <!-- Overlay -->
-    <div id="overlay"
-         class="fixed inset-0 bg-black/50 hidden z-40">
-    </div>
+      <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
 
-    <!-- Mobile menu -->
+      <!-- Mobile menu -->
       <div
         id="mobile-menu"
         class="fixed top-0 -right-full w-72 h-screen bg-[#0A5FC5] transition-all duration-500 ease-in-out z-50"
@@ -109,8 +107,7 @@
         </div>
       </div>
 
-
-<!-- Hero section -->
+      <!-- Hero section -->
       <section
         class="container flex flex-col-reverse gap-6 p-6 lg:flex-row items-center justify-between lg:gap-10"
       >
@@ -155,21 +152,17 @@
       document.getElementById("menu-btn").addEventListener("click", () => {
         menu.classList.remove("right-[-100%]");
         menu.classList.add("right-0");
-
         overlay.classList.remove("hidden");
       });
 
       function closeMenu() {
         menu.classList.remove("right-0");
         menu.classList.add("right-[-100%]");
-
         overlay.classList.add("hidden");
       }
 
       document.getElementById("close-btn").addEventListener("click", closeMenu);
-
       overlay.addEventListener("click", closeMenu);
     </script>
-
   </body>
 </html>
