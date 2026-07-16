@@ -34,11 +34,11 @@
       <nav class="container flex items-center justify-between py-5">
         <div class="flex justify-between items-center gap-20">
           <img
-            class="w-[120px] cursor-pointer"
+            class="w-20 md:w-[120px] cursor-pointer"
             src="images/logo.png"
             alt="SALUS"
           />
-          <ul class="hidden lg:flex gap-16 text-white text-xl">
+          <ul class="hidden lg:flex text-xl gap-8 xl:gap-12 text-white">
             <li><a href="#">HOME</a></li>
             <li><a href="#">SERVICES</a></li>
             <li><a href="#">LOCATIONS</a></li>
@@ -49,10 +49,16 @@
         <div class="hidden lg:flex items-center gap-6">
           <!-- Social Icons -->
           <div class="flex gap-3 text-white text-[24px]">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://www.instagram.com/zahed_ult/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/Zahedult96"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://wa.me/8801836849996"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
           </div>
 
           <!-- Search -->
@@ -60,11 +66,11 @@
             <input
               type="text"
               placeholder="SEARCH"
-              class="w-70 h-10 pl-6 pr-12 rounded-md border border-white bg-transparent text-white placeholder:text-white"
+              class="lg:w-40 h-10 pl-4 pr-8 rounded-md border border-white bg-transparent text-white placeholder:text-white xl:w-70 pl-6 pr-12"
             />
           </div>
         </div>
-        <button id="menu-btn" class="lg:hidden text-white text-3xl">
+        <button id="menu-btn" class="lg:hidden text-white text-2xl">
           <i class="fa-solid fa-bars"></i>
         </button>
       </nav>
@@ -75,45 +81,51 @@
       <!-- Mobile menu -->
       <div
         id="mobile-menu"
-        class="fixed top-0 -right-full w-72 h-screen bg-[#0A5FC5] transition-all duration-500 ease-in-out z-50"
+        class="fixed top-4 -right-full w-40 h-[60vh] rounded-l-xl bg-[#0A5FC5] transition-all duration-500 ease-in-out z-50"
       >
         <!-- Close Button -->
-        <div class="flex justify-end p-6">
-          <button id="close-btn" class="text-white text-3xl">
+        <div class="flex justify-end items-center p-6">
+          <button id="close-btn" class="text-white text-2xl">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
 
-        <ul class="flex flex-col gap-8 text-white text-xl px-8 mt-10">
+        <ul class="flex flex-col gap-4 text-white text-md px-8">
           <li><a href="#">HOME</a></li>
           <li><a href="#">SERVICES</a></li>
           <li><a href="#">LOCATIONS</a></li>
           <li><a href="#">HELP</a></li>
         </ul>
 
-        <div class="px-8 mt-10">
+        <div class="px-2 mt-6">
           <input
             type="text"
             placeholder="Search"
-            class="w-full h-11 rounded-md px-4 text-white border border-white bg-transparent placeholder:text-white"
+            class="w-full h-8 rounded-md px-4 text-white border border-white bg-transparent placeholder:text-white"
           />
         </div>
 
-        <div class="flex gap-5 text-white text-2xl px-8 mt-10">
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-          <i class="fa-brands fa-whatsapp"></i>
+        <div class="flex gap-4 text-white text-xl px-2 mt-5">
+          <a href="https://www.instagram.com/zahed_ult/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/Zahedult96"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://wa.me/8801836849996"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
         </div>
       </div>
 
       <!-- Hero section -->
       <section
-        class="container flex flex-col-reverse gap-6 p-6 lg:flex-row items-center justify-between lg:gap-10"
+        class="container flex flex-col-reverse p-2 lg:flex-row items-center justify-around lg:gap-5"
       >
-        <div class="w-full lg:w-1/2 text-center lg:text-left mt-10 lg:mt-20">
+        <div class="w-full text-center lg:w-[350px] lg:text-left mt-10">
           <h1
-            class="font-bold leading-none text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px]"
+            class="font-bold leading-none text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
           >
             YOUR <span class="text-[#003367]">HEALTH</span> IS OUR
             <span class="text-[#003367]">PRIORITY</span>
@@ -130,16 +142,13 @@
 
           <button
             type="button"
-            class="w-full sm:w-60 h-14 rounded-md border border-[#003367] text-xl font-bold text-[#003367] hover:bg-[#003367] hover:text-white duration-300"
+            id="btn"
+            class="w-full hover:bg-[#003367] hover:text-white duration-300 sm:w-60 h-14 rounded-md cursor-pointer border-2 border-[#003367] text-xl font-bold text-[#003367]"
           >
             START NOW
           </button>
         </div>
-        <img
-          src="images/doctor.png"
-          alt=""
-          class="w-[300px] h-[60vh] sm:w-[380px] md:w-[450px] lg:w-[650px] object-contain lg:h-[85vh]"
-        />
+        <img src="images/doctor.png" alt="" class="h-svw sm:h-[80vh]" />
       </section>
     </header>
 
